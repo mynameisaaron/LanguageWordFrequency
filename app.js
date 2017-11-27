@@ -6,9 +6,10 @@ var fs = require('fs');
 
 
 
-var sometext = fs.readFileSync('./File/citizenkane.srt', 'binary');
+var sometext = fs.readFileSync('./File/spanishtext.txt', 'binary');
 
-
+//  Hebrew text will disply properly when written to the file, needs to be encoded in utf-8
+//var sometext = fs.readFileSync('./File/hebrewtext.txt', 'utf-8');
 
 
 
@@ -62,7 +63,43 @@ function sortFunction(a, b) {
     }
 }
 
-console.log(freqArray);
+//console.log(freqArray.length);
+
+//fs.writeFileSync('./File/TESTTEST.txt')
+
+
+
+
+
+
+
+
+
+
+for(var i = 0; i < freqArray.length; i++){
+
+
+    fs.appendFileSync('./File/TESTTEST.txt', freqArray[i][0] + " -- " + freqArray[i][1]);
+    fs.appendFileSync('./File/TESTTEST.txt', '\r\n');
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
